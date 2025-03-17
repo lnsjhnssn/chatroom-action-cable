@@ -78,8 +78,7 @@ end
 group :production do
   # Use pg as the database for Active Record
   gem 'pg', '~> 1.4.3'
-  # Use Redis adapter to run Action Cable in production
-gem 'redis', '~> 4.0'
+  
   
 end
 
