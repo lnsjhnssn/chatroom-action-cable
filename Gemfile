@@ -61,8 +61,7 @@ group :development, :test do
   gem 'rubocop-rspec', '2.12'
   # Redis
   gem 'redis', '~> 4.0'
-  # After commit everywhere, to use postgres instead of redis on ActionCable
-  gem 'after_commit_everywhere', '~> 1.0'
+ 
 end
 
 group :development do
@@ -80,6 +79,8 @@ end
 group :production do
   # Use pg as the database for Active Record
   gem 'pg', '~> 1.4.3'
+   # Redis
+  gem 'redis', '~> 4.0'
 end
 
 gem "tailwindcss-rails", "~> 2.0"
