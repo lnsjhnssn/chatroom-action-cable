@@ -60,7 +60,7 @@ group :development, :test do
   gem 'rubocop', '~> 1.36'
   gem 'rubocop-rspec', '2.12'
   # Redis
-gem 'redis', '~> 4.8'
+gem 'redis', '~> 4.0'
 end
 
 group :development do
