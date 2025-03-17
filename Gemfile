@@ -25,7 +25,7 @@ gem 'webpacker', '~> 5.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.11'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+gem 'redis'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1'
 
@@ -59,8 +59,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 5.1'
   gem 'rubocop', '~> 1.36'
   gem 'rubocop-rspec', '2.12'
-  # Redis
-  gem 'redis', '~> 4.0'
  
 end
 
@@ -79,8 +77,7 @@ end
 group :production do
   # Use pg as the database for Active Record
   gem 'pg', '~> 1.4.3'
-   # Redis
-  gem 'redis', '~> 4.0'
+  
 end
 
 gem "tailwindcss-rails", "~> 2.0"
