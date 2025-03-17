@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Live Chatroom</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+<head>
+  <title>Live Chatroom</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-  <body class="<%= controller_name %> <%= action_name %>">
+  <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+  <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
-      <div class="mx-auto max-w-3xl">
-        <!-- Content goes here -->
-        <%= yield %>
-      </div>
+<body class="<%= controller_name %> <%= action_name %>">
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
+    <div class="mx-auto max-w-3xl">
+      <!-- Content goes here -->
+      <%= yield %>
     </div>
+  </div>
 
-  </body>
+</body>
+
 </html>
