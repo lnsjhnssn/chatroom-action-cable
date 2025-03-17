@@ -7,10 +7,18 @@ module Api
 
     def create
       @chat = Chat.new(chat_params)
-
-      return render 'bad_request', status: :bad_request unless @chat.save!
-
-      render 'show', status: :ok
+      
+      begin
+        if @chat.save
+          render 'show', status: :ok
+        else
+          Rails.logger.error("Chat save failed: #{@chat.errors.full_messages}")
+          render json: { errors: @chat.errors.full_messages }, status: :bad_request
+        end
+      rescue => e
+        Rails.logger.error("Exception in chat creation: #{e.message}")
+        render json: { error: "Server error: #{e.message}" }, status: :internal_server_error
+      end
     end
 
     private
